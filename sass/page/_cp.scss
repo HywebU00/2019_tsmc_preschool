@@ -1,0 +1,270 @@
+@charset "utf-8";
+// 文章標題
+h1.title{
+    line-height: 1.25em;
+    margin:.4em 0;
+}
+h3{
+    margin-top: 0;
+}
+.cp {
+    &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
+    table {
+        background: #FFF;
+        @include screen('xs_mobile') {
+            border: 1px dashed $secondaryColor;
+            border-top: 0;
+        }
+    }
+    img {
+        &.float_left {
+            float: left;
+            margin: 0px 1em 1em 0;
+            width: auto;
+            max-width: 55%;
+            @include screen('mobile') {
+                float: none;
+                max-width: 100%;
+                margin: 0px auto;
+            }
+        }
+        &.float_right {
+            float: right;
+            margin: 0px 0 1em 1em;
+            width: auto;
+            max-width: 55%;
+            @include screen('mobile') {
+                float: none;
+                max-width: 100%;
+                margin: 0px auto;
+            }
+        }
+    }
+    // a {
+    //     @include aSetting;
+    // }
+    .info {
+        font-size: 0.938em;
+        line-height: 1.5em;
+        list-style: none;
+        margin: 0 0 .7em 0;
+        border-left: solid 5px $primaryColor;
+        @include box-sizing;
+        padding: 0.8em 1.5em 0.8em;
+        background: #F2F2F2;
+        @extend %clearfix;
+        li {
+            width: 32%;
+            margin-bottom: .5em;
+            display: inline-block;
+            vertical-align: top;
+            @include screen('tablet') {
+                width: 48%;
+                margin-bottom: .2em;
+                font-size: 0.875em;
+            }
+            @include screen('mobile') {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+.bird{
+    top:380px;
+    left: calc(50% + 250px);
+    right: 20%\9;
+}
+.apply_table{
+
+    .title{
+        background:$lightColor;
+        color: #bf7054;
+        font-weight: normal;
+    }
+    .date{
+        color: $aColor;
+        @include screen('xs_mobile') {
+            text-align: center;
+        }
+    }
+    .apply_btn{
+        text-align: center;
+        padding: 0;
+        a{
+            padding: 3px 6px;
+            @extend %btn_animation;
+        }
+        @include screen('xs_mobile') {
+            margin:0 auto;
+            width: 200px;
+        }
+    }
+}
+.sec{
+    margin: 40px 0 30px;
+    >ul{
+        list-style: none;
+        margin:0;
+        padding: 0;
+    }
+    h4{
+        position: relative;
+        line-height: 2.2;
+        text-indent: 55px;
+        margin-bottom: 15px;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            display: inline-block;
+            background: url(../images/basic/A/flower.png) no-repeat;
+            background: url(../images/basic/A/flower_ie8.png) no-repeat\9;
+            background-size: contain;
+            width: 44px;
+            height: 38px;
+        }
+        &:after{
+            content: "";
+            display: block;
+            height: 5px;
+            width: 100%;
+            background: url(../images/basic/A/title_line.png) repeat-x left center;
+            background-size: contain;
+        }
+    }
+}
+.download{
+    >ul{
+        @include screen('mobile') {
+            padding: 20px 0;
+        }
+        .file{
+            display: inline-block;
+            width: 50%;
+            margin:5px 0 5px -3px;
+            text-align: center;
+            @include screen('xs_mobile') {
+                width: 100%;
+            }
+            a{
+                padding: 5px 0;
+                border-bottom: 1px solid $aColor;
+                position: relative;
+                margin-left: -10px;
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 3px;
+                    right: -35px;
+                    width: 20px;
+                    height: 22px;
+                    background: url(../images/basic/A/download.png) no-repeat;
+                    background-size: contain;
+                    background: url(../images/basic/A/download_ie8.png) no-repeat\9;
+                }
+                &:hover:after{
+                    animation-name: icon_down;
+                    animation-duration: .5s, 1.5s;
+                    animation-delay: 0s, .3s;
+                    animation-timing-function: ease-out, ease-in-out;
+                    animation-iteration-count: 2, infinite;
+                    animation-direction: normal, alternate;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+}
+.contact{
+    >ul{
+        li{
+            display: inline-block;
+            background: rgba($lightColor, .5);
+            background: #ffeae2\9;
+            width: 33%;
+            margin-left: -1.5px;
+            margin-bottom: 3px;
+            box-sizing: border-box;
+            line-height: 1.5;
+            @include screen('mobile') {
+                width: 49.7%;
+            }
+            @include screen('xs_mobile') {
+                width: 100%;
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+            &:nth-child(odd){
+                @include screen('mobile') {
+                    margin-left: 0;
+                }
+            }
+            h5, p{
+                padding: .2em .8em;
+                color:#bf7054;
+            }
+            h5{
+                background: $lightColor;
+                font-size: 1.1em;
+                font-weight: normal;
+            }
+            p{
+                margin:.5em 0;
+            }
+        }
+    }
+}
+
+// 外部連結
+.web_link {
+    width: 100%;
+    margin: 0 auto;
+    @extend %clearfix;
+    h3 {
+        font-size: 1.5em;
+        padding: 12px 0px 15px 0px;
+        margin: 0.5em 0px 0.2em;
+        border-bottom: 1px solid $primaryColor;
+    }
+    ol,
+    ul {
+        counter-reset: counter;
+        list-style-type: none;
+        padding: 0;
+        margin-left: 1em;
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+        }
+    }
+    li {
+        position: relative;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #EEE;
+        a {
+            padding: .2em 0px .2em 35px;
+            position: relative;
+            height: auto;
+            line-height: 1.45em;
+            display: block;
+            @include aSetting_nocolor;
+            &:before {
+                position: absolute; // outline: 1px solid red;
+                top: 5px;
+                left: 0px;
+                text-align: right;
+                width: 30px;
+                counter-increment: counter;
+                content: counters(counter, ".") " . ";
+            }
+        }
+    }
+}

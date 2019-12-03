@@ -1,0 +1,167 @@
+.sp{
+    table {
+        td {
+            padding: .5em .2em;
+            text-align: center;
+            line-height: 1.5;
+            @include screen('mobile') {
+                text-align: left;
+            }
+            a {
+                color: $aColor;
+                text-decoration: none;
+                &:hover{
+                    color:$aHover;
+                }
+            }
+        }
+    }
+    .container{
+        >div{
+            &.apply_table{
+                padding: 0;
+            }
+        }
+    }
+
+    .apply_table, .result_table{
+        position: relative;
+        .apply_btn_grp{
+            position: absolute;
+            right: 0;
+            top: -4px;
+            @include screen('mobile') {
+                position: static;
+                text-align: center;
+            }
+            .add_apply_btn{
+                @extend %btn_animation;
+                text-align: center;
+                padding: .2em 1em;
+                display: inline-block;
+
+            }
+        }
+        .form_inline{
+            @include screen('mobile') {
+                text-align: center;
+            }
+        }
+
+    }
+    .nomal_btn{
+        @extend %btn_animation;
+        white-space: nowrap;
+        padding: .1em .5em;
+        margin: .2em 0;
+        font-size: .938em;
+        background: $secondaryColor;
+        &:hover, &:focus{
+            color:#fff;
+        }
+        &.del_btn{
+            background: #BBB;
+        }
+    }
+}
+
+.apply_form{
+    input[disabled]{
+        background: #f1f1f1;
+    }
+}
+.pop_form{
+    form{
+        >div{
+            margin:.5em 0;
+        }
+        p{
+            margin-bottom: .5em;
+        }
+        label{
+            margin-right: 0;
+            @include screen('mobile') {
+                display: block;
+            }
+        }
+        .form_grp{
+            margin-right: 1em;
+            text-align: left;
+            @include screen('mobile') {
+                display: block;
+            }
+            .ps{
+                font-size: .95em;
+                color: $color-yellow;
+            }
+        }
+        .radio_grp, .btn_grp{
+            display: block;
+        }
+        .form_block{
+            text-align: left;
+        }
+    }
+    .label_list{
+        position:relative;
+        padding-left:.5em;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top:.5em;
+            display: block;
+            width: 3px;
+            height: 1em;
+            background: $secondaryColor;
+        }
+    }
+
+}
+.pop_form_s{
+    width: 340px;
+    height: 235px;
+    margin-left:-170px;
+    .modal_content{
+        top:50px;
+        text-align: left;
+        .btn_grp{
+            padding-bottom: 0;
+        }
+    }
+}
+.back{
+    text-align: center;
+    a, input[type=submit]{
+        display: inline-block;
+        padding: 0 1em;
+        margin-bottom: 20px;
+        line-height: 2em;
+        color: $secondaryColor;
+        border: 1px solid $secondaryColor;
+        border-radius: $btn-radius;
+        background: #fff;
+        transition: all .3s;
+        &:hover{
+            color: #fff;
+            background: $secondaryColor;
+        }
+    }
+
+}
+#loading{
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+    background: rgba(0,0,0, .4);
+    z-index: 9999;
+    color:#f7f7f7;
+    img{
+        width: 50px;
+        height: auto;
+        margin-top: 50vh;
+    }
+}

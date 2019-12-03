@@ -1,0 +1,242 @@
+%B_btn_color{
+    background: $primaryColor_B;
+}
+/*=================================*/
+
+.B{
+    .header{
+        &:before{
+            background-color: $primaryColor_B;
+        }
+        &:after{
+            background: url(../images/basic/B/header_border_bottom.png) repeat-x center bottom;
+        }
+    }
+    .search {
+        form{
+            &.form_inline {
+                input[type="text"]{
+                    background: darken($primaryColor_B, 10);
+                }
+            }
+            input[type="submit"]{
+                &:hover{
+                    background: url(../images/basic/icon_search.png) no-repeat center center;
+                    background-size: 20px;
+                    background-image: url(../images/basic/icon_search_ie8.png) \9;
+                }
+            }
+        }
+    }
+    .breadcrumb{
+        ul{
+            li{
+                color: $primaryColor_B;
+            }
+        }
+    }
+    .wrapper {
+        &:before,{
+            background: url(../images/basic/B/star_bg_left.png) repeat-y top left;
+        }
+        &:after{
+            background: url(../images/basic/B/star_bg_right.png) repeat-y top right;
+        }
+    }
+    .main{
+        &:after{
+            background: url(../images/basic/B/footer_border_top.png) repeat-x center top;
+        }
+        .title_pic{
+            background: url(../images/basic/B/animal_bg_2.png) no-repeat top center;
+            background-size: contain;
+        }
+    }
+    .footer{
+        background: $secondaryColor_B;
+    }
+
+    /*==============table==================*/
+    table{
+        td, th{
+            border-color:$secondaryColor_B;
+        }
+    }
+    /*==============input==================*/
+    button,
+    input[type="button"],input[type="submit"]{
+        @include btn_setting($form-focus_B, #FFF);
+    }
+    input[type="submit"]{
+        background: $primaryColor_B;
+    }
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+        border-color: $form-focus_B;
+        background-color: $form-focus_B;
+    }
+    input[type="checkbox"]:checked {
+        box-shadow: $form-focus_B 0 0 0 1px;
+    }
+    input[type="radio"]:checked {
+        box-shadow: #fff 0 0 0 3px inset, $form-focus_B 0 0 0 1px;
+    }
+    input[type="text"]:focus,
+    input[type="file"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+        border: 1px solid lighten($form-focus_B, 20);
+        @include box-shadow(0px 0px 0px 2px lighten($form-focus_B, 20));
+    }
+    /*==============modal================*/
+    .modal{
+        h2{
+             border-bottom: 1px solid $primaryColor_B;
+        }
+    }
+    .pop_form{
+        .label_list{
+            &:before{
+                background: $secondaryColor_B;
+            }
+        }
+    }
+    /*==============mp==================*/
+    .activity_title{
+        &:before, &:after{
+            background: url(../images/basic/B/vvv.png) no-repeat;
+        }
+        &:after{
+            right: 0;
+            transform:scaleX(-1);
+            background: url(../images/basic/B/vvv_ie8.png) no-repeat\9;
+        }
+        h3{
+            color:#618216;
+            &:before, &:after{
+                background: url(../images/basic/B/title_line.png) repeat-x left center;
+            }
+        }
+    }
+    .content{
+        .date_info{
+            .col{
+                h4{
+                    color: #557900;
+                }
+                &:before{
+                    background: url(../images/basic/B/straight_line.png) repeat-y center left;
+                }
+                &:first-child:before{
+                    background: inherit;
+                }
+            }
+        }
+    }
+    .district{
+        >.container{
+            .kindergarten{
+                background: url(../images/basic/B/animal_bg.png) no-repeat top center;
+            }
+        }
+    }
+
+     /*==============cp==================*/
+     .apply_table{
+        .title{
+            background:$lightColor_B;
+            color: #687d04;
+        }
+        .date{
+            color: $aColor_B;
+        }
+        .apply_btn{
+            a, {
+                @extend %B_btn_color;
+            }
+        }
+        .apply_btn_grp{
+            .add_apply_btn{
+                @extend %B_btn_color;
+            }
+        }
+    }
+    .nomal_btn{
+        background: $secondaryColor_B;
+    }
+
+    .sec{
+        h4{
+            color: #586b00;
+            &:before{
+                background: url(../images/basic/B/flower.png) no-repeat;
+                background: url(../images/basic/B/flower_ie8.png) no-repeat\9;
+                background-size: contain;
+            }
+            &:after{
+                background: url(../images/basic/B/title_line.png) repeat-x left center;
+            }
+        }
+     }
+    .download{
+        >ul{
+            .file{
+                a{
+                    color:$aColor_B;
+                    border-bottom: 1px solid $aColor_B;
+                    &:after{
+                        background: url(../images/basic/B/download.png) no-repeat;
+                        background-size: contain;
+                        background: url(../images/basic/B/download_ie8.png) no-repeat\9;
+                    }
+                }
+            }
+        }
+    }
+    .contact{
+        >ul{
+            li{
+                background: rgba($lightColor_B, .5);
+                h5{
+                    background: $lightColor_B;
+                }
+                h5, p{
+                    color: #687d04;
+                }
+            }
+        }
+    }
+    .back{
+        a, input[type=submit]{
+            color: $secondaryColor_B;
+            border: 1px solid $secondaryColor_B;
+            background: #fff;
+            &:hover{
+                color: #fff;
+                background: $secondaryColor_B;
+            }
+        }
+    }
+    /*==============sp==================*/
+    .sp{
+        table {
+            td {
+                a {
+                    color: $aColor_B;
+                    text-decoration: none;
+                    &:hover{
+                        color:$aHover_B;
+                    }
+                    &.nomal_btn{
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

@@ -1,0 +1,30 @@
+.footer {
+    @include box-sizing(border-box);
+    @include clearfix;
+    text-align: left;
+    font-size: 0.813em;
+    padding: 1em 0;
+    background: $secondaryColor;
+    position: relative;
+    z-index: 999;
+    .container {
+        text-align: center;
+        @include gutter;
+        >div {
+            padding-bottom: 1em;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+    p {
+        line-height: 1.65em;
+        color: #fff;
+    }
+
+}

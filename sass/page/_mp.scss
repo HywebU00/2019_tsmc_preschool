@@ -1,0 +1,223 @@
+
+.mp{
+    .bird{
+        top:700px;
+        left: calc(50% + 350px);
+        right: 15%\9;
+    }
+    h3{
+        margin-top: 25px;
+    }
+}
+
+.main_pic{
+    padding: 1em 0;
+    .container{
+        max-width: 1000px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.content{
+    .container{
+        >div{
+            padding: 0 60px;
+            @include  screen('mobile') {
+                padding: 0 20px;
+            }
+            @include  screen('xs_mobile') {
+                padding: 0 10px;
+            }
+        }
+    }
+    .activity_title{
+        position: relative;
+        margin: 10px 0;
+        text-align: center;
+        @include  screen('mobile') {
+            margin:0;
+        }
+        &:before, &:after{
+            content:"";
+            position: absolute;
+            top: 0;
+            background: url(../images/basic/A/vvv.png) no-repeat;
+            background-size: contain;
+            width: 186px;
+            height: 164px;
+            display: inline-block;
+            @include  screen('mobile') {
+                width: 150px;
+                height: 120px;
+            }
+            @include  screen('xs_mobile') {
+                display: none;
+            }
+        }
+        &:before{
+            left: 0;
+        }
+        &:after{
+            right: 0;
+            transform:scaleX(-1);
+            background: url(../images/basic/A/vvv_ie8.png) no-repeat\9;
+        }
+        h3{
+            color:$primaryColor;
+            font-size: 1.5em;
+            display: inline-block;
+            line-height: 1.5;
+            letter-spacing: 1px;
+
+            &:before, &:after{
+                content:"";
+                display: block;
+                min-width: 380px;
+                width: 100%;
+                height: 8px;
+                background: url(../images/basic/A/title_line.png) repeat-x left center;
+                background-size: contain;
+                margin:20px auto;
+                @include  screen('mobile') {
+                    min-width: 300px;
+                }
+            }
+            // &:after{
+            //     margin-bottom: 0;
+            // }
+            @include  screen('xs_mobile') {
+                font-size: 1.2em;
+                margin:0;
+            }
+        }
+    }
+    h4{
+        color: #6a4727;
+    }
+    .activity_text{
+        word-wrap: break-word;
+    }
+    .date_info{
+        padding: 0 60px;
+        margin: 50px auto;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        display:-ms-flexbox;
+        flex-wrap:wrap;
+        align-content: flex-start;
+        justify-content:center;
+        flex-direction:row;
+        -ms-flex-direction: row;
+        list-style: none;
+        @include  screen('mobile') {
+            padding:0;
+            margin: 20px auto;
+        }
+        .col{
+            // @include make-xs-column(12);
+            // @include make-sm-column(4);
+            // @include make-md-column(4);
+            // @include make-lg-column(4);
+            // @include gutter();
+            position: relative;
+            text-align: center;
+            min-height: 143px;
+            width: 33.33%;
+            display: inline-block\9;
+            margin-left: -4px\9;
+            @include  screen('xs_mobile'){
+                width: 100%;
+            }
+            &:before{
+                content:"";
+                display: block;
+                width: 8px;
+                min-height: 143px;
+                height: 100%;
+                background: url(../images/basic/A/straight_line.png) repeat-y center left;
+                position: absolute;
+                left:-4px;
+                top:0;
+                bottom: 0;
+                @include  screen('xs_mobile') {
+                    width: 230px;
+                    height: 8px;
+                    background: url(../images/basic/A/title_line.png) no-repeat top left;
+                    left:50%;
+                    margin-left: -115px;
+                }
+            }
+            &:first-child:before{
+                background: inherit;
+            }
+            h4{
+                color: #4d2000;
+                font-size: 1.5em;
+            }
+            .time{
+                color: $primaryColor;
+                font-size: 2.25em;
+                font-family: Georgia;
+                font-weight: bold;
+                >span{
+                    font-size: 1.25rem;
+                    font-size: 20px\9;
+                    &+span{
+                        padding-left: 4px;
+                        @include  screen('mobile'){
+                            display: block;
+                            padding: 5px 0 10px 0;
+                        }
+                        @include  screen('xs_mobile'){
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.district{
+    text-align: center;
+    >.container{
+        display: flex;
+        display:-ms-flexbox;
+        flex-wrap:wrap;
+        align-content: flex-start;
+        justify-content:center;
+        flex-direction:row;
+        -ms-flex-direction: row;
+        &:before, &:after{
+            display: none;
+        }
+        .wrap{
+            display: inline-block\9;
+            text-align: center;
+            width: 220px;
+            margin:0 20px;
+            img{
+                width: 198px;
+                height: auto;
+                transition: all .5s;
+            }
+            h4{
+                font-size: 1.125em;
+                color:$color-word;
+            }
+            &:hover img{
+                transform: scale(1.2) rotate(12deg);
+            }
+            @include  screen('mobile') {
+                margin:0;
+            }
+
+        }
+        .kindergarten{
+            background: url(../images/basic/A/animal_bg.png) no-repeat top center;
+            background-size: contain;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.breadcrumb {
+    padding: 1em 0em;
+    font-size: .813em;
+    margin: 0px auto 5px;
+    ul {
+        @include li-reset;
+        li {
+            display: inline-block;
+            margin: 0px .1em .1em 0px;
+            color: $primaryColor;
+            &:before {
+                @extend %slash;
+            }
+            &:first-child:before {
+                content: "";
+                display: inline-block;
+                background: url(../images/basic/breadcrumb_icon.png) no-repeat;
+                background: url(../images/basic/breadcrumb_icon_ie8.png) no-repeat\9;
+                background-size: contain;
+                margin-left: 0;
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                margin:0 6px -2px 0;
+            }
+        }
+    }
+    a {
+        color:$color-word;
+    }
+}
