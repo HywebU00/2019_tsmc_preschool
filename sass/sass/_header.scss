@@ -240,10 +240,13 @@
     form{
         &.form_inline {
             input[type="text"]{
-                width: 80%;
+                width: 180px;
                 background: darken($primaryColor, 10);
                 border: none;
                 border-radius: 0;
+                @include screen('mobile'){
+                    width:90%;
+                }
                 &::-webkit-input-placeholder{
                     color: #fff;
                     font-size: .875em;
@@ -341,13 +344,16 @@
             font-size: 0em;
             line-height: 0;
         }
+        .form_inline{
+            overflow:hidden;
+        }
         .form_grp {
-            width: 80%;
+            width: 90%;
             height: auto;
-            padding: 0 0 0 5% !important;
+            //padding: 0 0 0 5% !important;
             margin-top: 15px;
             text-align: right;
-            float: left;
+            //float: left;
             height: 40px;
             position: relative;
             @include box-sizing();
