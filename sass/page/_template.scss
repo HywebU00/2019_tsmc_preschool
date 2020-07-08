@@ -10,6 +10,7 @@ body {
     }
 }
 
+
 // 最外圍預設為100%
 .wrapper {
     width: 100%;
@@ -143,7 +144,21 @@ body {
             transform:rotate(60deg);
         }
     }
+}
 
+//英文版
+:lang(en){
+    .main{
+        .top{
+            h2{
+                &.main_title{
+                    >img{
+                        padding-bottom:10px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // 整體共用container樣式，請注意首頁切版頁面的整齊
@@ -193,7 +208,7 @@ body {
                         padding: 0 10px;
                     }
                     @include screen('xs_mobile') {
-                        width: 210px;
+                        width: 70%;
                         padding: 0 10px;
                     }
                 }

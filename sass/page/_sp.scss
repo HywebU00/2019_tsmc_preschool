@@ -7,6 +7,12 @@
             @include screen('mobile') {
                 text-align: left;
             }
+            &.modal_content{
+                text-align: left;
+                form{
+                    text-align: left;
+                }
+            }
             a {
                 color: $aColor;
                 text-decoration: none;
