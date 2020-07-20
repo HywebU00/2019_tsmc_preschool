@@ -75,6 +75,9 @@
     input[disabled]{
         background: #f1f1f1;
     }
+    input[type="submit"]{
+        background: $primaryColor;
+    }
 }
 .pop_form{
     form{
