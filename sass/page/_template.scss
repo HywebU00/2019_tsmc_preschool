@@ -147,19 +147,19 @@ body {
 }
 
 //英文版
-:lang(en){
-    .main{
-        .top{
-            h2{
-                &.main_title{
-                    >img{
-                        padding-bottom:10px;
-                    }
-                }
-            }
-        }
-    }
-}
+// :lang(en){
+//     .main{
+//         .top{
+//             h2{
+//                 &.main_title{
+//                     >img{
+//                         padding-bottom:10px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
@@ -194,8 +194,12 @@ body {
         h2 {
             line-height: 1.25em;
             &.main_title{
-                display: inline-block;
-                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: inline-block\9;
+                margin: 0 0 1em 0;
+                text-align: center;
                 @include screen('mobile') {
                     margin:1.2em 0;
                 }
